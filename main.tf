@@ -27,9 +27,9 @@ resource "aws_security_group" "dg_web_server_sg_tf" {
   vpc_id      = data.aws_vpc.default.id
 
   ingress {
-    description = "HTTPS ingress"
-    from_port   = 443
-    to_port     = 443
+    description = "HTTP ingress"
+    from_port   = 80
+    to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
